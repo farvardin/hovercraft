@@ -13,8 +13,10 @@ Hovercraft for txt2tags
 %!preproc(rst): '\/\...' '---------------------'
 
 % The note syntax in hovercraft was too rst looking for us. So we're using %note or %%note
-%!preproc(rst): '%note:' '.. note:: \n\n   '
+
 %!preproc(rst): '%%note:' '.. note:: \n\n   '
+%!preproc(rst): '%note:' '.. note:: \n\n   '
+
 
 
 %!preproc(rst): '%%class:' ':class:'
@@ -54,6 +56,9 @@ doing it wrong! It's going to be confusing and not very useful.
 Use The Source, Luke! But first you probably want to read through the
 official documentation at https://hovercraft.readthedocs.org/ (TODO)
 
+Other alternatives: 
+ - http://reb4.me/s5/impress.js (make doc + impress.js, in plain text)
+
 NOTE: This presentation will only start after the symbol below (either 4 dashes, slash star slash star, or slash dot dot dot)
 
 /...
@@ -66,11 +71,6 @@ NOTE: This presentation will only start after the symbol below (either 4 dashes,
 %%note: Welcome to the presenter console!
 
 /...
-
-% :id: green
-% :class: green
-
-%%class: green
 
 
 
@@ -89,13 +89,15 @@ NOTE: This presentation will only start after the symbol below (either 4 dashes,
 
 
 
+%%class: green
+
 = Use txt2tags! =
 
 [t2t_logo.png]
 
 - You can use your favorite text-editor!
 
-- Many tools available: export to Beamer, pdf, html
+- Many tools available: export to beamer, pdf, html
 
 - Convenient (and powerful!)
 
@@ -240,12 +242,17 @@ Of course there is!
 %%data-x: r-2500
 %%data-y: r0
 
+%%class: orange
+
 = Introducing **Hovercraft!** =
+
 
 %note: 
     TADA!
     
 /...
+
+%%class: blue
 
 %%data-x: r-3000
 %%data-scale: 1
@@ -319,50 +326,59 @@ The merge of convenience and cool!
 %%data-z: 4000
 %%data-rotate-x: 90
 
-= **Hovercraft!** =
+//and now...//
 
+= **Hovercraft-t2t!** =
+
+Edit your presentation with the txt2tags syntax!
 
 On Github: 
 
 https://github.com/farvardin/hovercraft-t2t
 
-**Note**: We didn't code hovercraft. Hovercraft-t2t is only a frontend to produce a reStructuredText document from a txt2tags document, and it will be parsed further with the hovercraft tool.
+%note: 
+    Fork and contribute!
+
+/...
+
+%%data-x: 0
+%%data-y: 4500
+%%data-z: 4000
+%%data-rotate-x: 00
+
+**Note**: We didn't code hovercraft. 
+
+Hovercraft-t2t is only a frontend to produce a reStructuredText document from a txt2tags document, and it will be parsed further with the hovercraft tool.
 
 The original hovercraft is located at https://github.com/regebro/hovercraft
 
-%note: 
-    Fork and contribute!
-    
 
 /...
 
 
-= Use =
 
-Install hovercraft:
 
+= How to use it =
+
+- Install hovercraft with this command:
+
+ 
 ``` pip install hovercraft
 
+%note: If it fails, try:
+    sudo pip install --upgrade setuptools
+    pip-3.2 install --upgrade hovercraft
+
+- Study the //t2t// source at:
+
+https://github.com/farvardin/hovercraft-t2t/blob/master/hovercraft-t2t.t2t
+ 
+ 
+
+/...
 
 
-= More examples =
 
+= Thank you for your attention! =
 
-- lists 
-
-
-/*/*
-- lists 
-- with elements
-
-/*/*
-- lists 
-- with elements
-- appearing
-
-/*/*
-- lists 
-- with elements
-- appearing
-- one by one
 
